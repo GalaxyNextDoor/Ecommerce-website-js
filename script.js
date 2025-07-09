@@ -21,7 +21,7 @@ function displayProducts(products) {
         title.textContent = product.title;
         const price = document.createElement("p");
         price.className = "product-price";
-        price.textContent = product.price;
+        price.textContent = `price: ${product.price}`;
         const button = document.createElement("button");
         button.className = "add-to-cart-btn";
         button.textContent = "Add to cart";
