@@ -25,7 +25,13 @@ function displayProducts(products) {
         const button = document.createElement("button");
         button.className = "add-to-cart-btn";
         button.textContent = "Add to cart";
-        productCard.append(image, title, price, button);
+        button.addEventListener("click", () => {
+            alert(`${product.title} has been added to the cart`);
+        });
+        const description = document.createElement("description");
+        description.className = "product-description"
+        description.textContent = product.description;
+        productCard.append(image, title, price, button,description);
         container.append(productCard);
     })
 }
